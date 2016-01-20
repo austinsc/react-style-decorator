@@ -1,4 +1,4 @@
-import Style from '../../src/react-style-decorator';
+import Style from '../../src';
 
 describe('Style', () => {
   describe('Greet function', () => {
