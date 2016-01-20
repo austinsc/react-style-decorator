@@ -18,26 +18,12 @@ The purpose of the module is to provide an easy way to attach a reffable style t
 
 ## Example 
  
- Lets say that you want to attach a reffable style to an object during the mounted portion of a React component's lifecycle:
- 
- ```javascript
- const stylesheet = {
-  ref() {
-    // do something whenever the component mounts
-  }
-   
-  unref() {
-    // do something whenever the component unmounts
-  }
-};
-```
-
-Now, you can attatch this stylesheet to an object like this:
+Using the style decorator, you can attatch a stylesheet to a component like this:
 
 ```javascript
 import Style from 'react-style-decorator';
 
-@Style(stylesheet)
+@Style(require('css/my-component.css'))
 class MyComponent extends Component {
   render() {
     return (
@@ -47,12 +33,14 @@ class MyComponent extends Component {
 }
 ```
 
-This decorator also supports multiple 'style' arguments:
+The above example assumes that you are using webpack's [style-loader](https://github.com/webpack/style-loader) with the `/usable` option. This converts the stylesheet into a javascript module that has a reference counting feature. [Click here](https://github.com/webpack/style-loader#reference-counted-api) for more information about the reference counting feature.
+
+This decorator also supports variadic style arguments, so you can pass as many stylesheets into the decorator that you want:
 
 ```javascript
 import Style from 'react-style-decorator';
 
-@Style(stylesheet1, stylesheet2, stylesheet3)
+@Style(require('css/my-component1.css'), require('css/my-component2.css'), require('css/my-component3.css'))
 class MyComponent extends Component {
   render() {
     return (
