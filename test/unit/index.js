@@ -45,7 +45,7 @@ describe('Style', () => {
       expect(stylesheet2.result).to.be.equal(2);
     });
 
-    it('Should have called the original componentWillUnmount function', () => {
+    it('Should have called the original componentWillMount function', () => {
       expect(tc.counter).to.be.equal(1);
     });
 
