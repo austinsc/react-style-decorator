@@ -17,7 +17,10 @@
     "url": "https://github.com/RoviSys/react-style-decorator.git"
   },
   "keywords": [],
-  "author": "Stephen C. Austin <stephen.austin@rovisys.com>",
+  "authors": [
+    "Stephen C. Austin <stephen.austin@rovisys.com>",
+    "Brandon Alanskas <brandon.alanskas@rovisys.com>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/RoviSys/react-style-decorator/issues"
