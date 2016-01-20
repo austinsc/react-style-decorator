@@ -1,7 +1,7 @@
 {
   "name": "react-style-decorator",
   "version": "0.0.1",
-  "description": "A handy style decorator for react components.",
+  "description": "ES7 decorator for attaching a reffable style to the component lifecycle.",
   "main": "dist/react-style-decorator.js",
   "scripts": {
     "test": "gulp",
@@ -9,14 +9,15 @@
     "test-browser": "gulp test-browser",
     "watch": "gulp watch",
     "build": "gulp build",
-    "coverage": "gulp coverage"
+    "coverage": "gulp coverage",
+    "release": "./node_modules/.bin/release-it -p -u -n"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/RoviSys/react-style-decorator.git"
   },
   "keywords": [],
-  "author": "Stephen Austin <stephen.austin@pwnt.co>",
+  "author": "Stephen C. Austin <stephen.austin@rovisys.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/RoviSys/react-style-decorator/issues"
@@ -31,13 +32,14 @@
     "babel-register": "^6.3.13",
     "chai": "^3.4.1",
     "del": "^2.2.0",
+    "eslint-plugin-babel": "^3.0.0",
+    "eslint-plugin-private-variables": "^0.1.2",
     "glob": "^6.0.3",
     "gulp": "^3.9.0",
     "gulp-babel": "^6.1.1",
     "gulp-eslint": "^1.1.1",
     "gulp-filter": "^3.0.0",
     "gulp-istanbul": "^0.10.3",
-    "gulp-jscs": "^3.0.0",
     "gulp-livereload": "^3.8.1",
     "gulp-load-plugins": "^1.1.0",
     "gulp-mocha": "^2.2.0",
@@ -49,6 +51,7 @@
     "isparta": "^4.0.0",
     "json-loader": "^0.5.3",
     "mocha": "^2.3.4",
+    "release-it": "^2.3.1",
     "sinon": "^1.17.2",
     "sinon-chai": "^2.8.0",
     "vinyl-source-stream": "^1.1.0",
