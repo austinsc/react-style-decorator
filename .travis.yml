@@ -1,14 +1,14 @@
 language: node_js
 node_js:
-  - node
+- node
 sudo: false
 script:
-  - npm run test
-  - npm run coverage
-  - npm run build
+- npm run test
+- npm run coverage
+- npm run build
 after_success:
-  - npm install -g codeclimate-test-reporter
-  - codeclimate-test-reporter < coverage/lcov.info
+- npm install -g codeclimate-test-reporter
+- codeclimate-test-reporter < coverage/lcov.info
 addons:
   code_climate:
     repo_token: b9391e2a51755bb904a5e364acd9b6c07149bd1e4469902008e7e36fa26bd526
