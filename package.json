@@ -1,6 +1,6 @@
 {
   "name": "react-style-decorator",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "ES7 decorator for attaching a reffable style to the component lifecycle.",
   "main": "dist/react-style-decorator.js",
   "scripts": {
