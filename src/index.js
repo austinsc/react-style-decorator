@@ -1,18 +1,20 @@
+import React, {Component} from 'react';
+
 export default function Style(...styles) {
-  return function decorator(Component) {
+  return function decorator(WrappedComponent) {
     return class StyleComponent extends Component {
+      static displayName = `Styled(${WrappedComponent.displayName})`;
+
       componentWillMount() {
         styles.forEach(style => style.ref());
-        if(super.componentWillMount) {
-          super.componentWillMount();
-        }
       }
 
       componentWillUnmount() {
-        if(super.componentWillUnmount) {
-          super.componentWillUnmount();
-        }
         styles.forEach(style => style.unref());
+      }
+
+      render() {
+        return <WrappedComponent {...this.props}/>;
       }
     };
   };
